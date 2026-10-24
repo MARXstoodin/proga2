@@ -1,16 +1,7 @@
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import ru.ifmo.se.pokemon.Pokemon;
-import ru.ifmo.se.pokemon.Type;
-import ru.ifmo.se.pokemon.Battle;
-import ru.ifmo.se.pokemon.PhysicalMove;
-import ru.ifmo.se.pokemon.StatusMove;
-import ru.ifmo.se.pokemon.SpecialMove;
-import ru.ifmo.se.pokemon.Messages;
+import ru.ifmo.se.pokemon.*;
 
 final class Double_Team extends StatusMove{
 	public Double_Team(){
@@ -18,6 +9,9 @@ final class Double_Team extends StatusMove{
 	}
 	public String describe() {
         return "Double Team";
+	}
+	protected void sapplySelfEffects(Pokemon p){
+		p.setMod(Stat.EVASION, 1);
 	}
 }
 
@@ -36,6 +30,10 @@ final class Swagger extends StatusMove{
 	}
 	public String describe() {
         return "Swagger";
+	}
+	protected void applyOppEffects(Pokemon p){
+		Effect.confuse(p);
+		p.setMod(Stat.ATTACK, 2);
 	}
 }
 
@@ -91,6 +89,10 @@ final class Rest extends StatusMove{
 	public String describe() {
         return "Rest";
 	}
+	protected void sapplySelfEffects(Pokemon p){
+		Effect.sleep(p);
+		p.restore();
+	}
 }
 
 final class Rock_Throw extends PhysicalMove{
@@ -108,6 +110,10 @@ final class Cosmic_Power extends StatusMove{
 	}
 	public String describe() {
         return "Cosmic Power";
+	}
+	protected void sapplySelfEffects(Pokemon p){
+		p.setMod(Stat.DEFENSE, 1);
+		p.setMod(Stat.SPECIAL_DEFENSE, 1);
 	}
 }
 
