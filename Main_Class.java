@@ -12,7 +12,7 @@ import ru.ifmo.se.pokemon.StatusMove;
 import ru.ifmo.se.pokemon.SpecialMove;
 import ru.ifmo.se.pokemon.Messages;
 
-class Double_Team extends StatusMove{
+final class Double_Team extends StatusMove{
 	public Double_Team(){
 		super(Type.NORMAL, 0, 0);
 	}
@@ -21,7 +21,7 @@ class Double_Team extends StatusMove{
 	}
 }
 
-class Thunder extends SpecialMove{
+final class Thunder extends SpecialMove{
 	public Thunder(){
 		super(Type.ELECTRIC, 110, 70);
 	}
@@ -30,7 +30,7 @@ class Thunder extends SpecialMove{
 	}
 }
 
-class Swagger extends StatusMove{
+final class Swagger extends StatusMove{
 	public Swagger(){
 		super(Type.NORMAL, 0, 85);
 	}
@@ -39,7 +39,7 @@ class Swagger extends StatusMove{
 	}
 }
 
-class Razor_Leaf extends PhysicalMove{
+final class Razor_Leaf extends PhysicalMove{
 	public Razor_Leaf(){
 		super(Type.GRASS, 55, 95);
 	}
@@ -48,7 +48,7 @@ class Razor_Leaf extends PhysicalMove{
 	}
 }
 
-class Overheat extends PhysicalMove{
+final class Overheat extends PhysicalMove{
 	public Overheat(){
 		super(Type.FIRE, 130, 90);
 	}
@@ -57,7 +57,7 @@ class Overheat extends PhysicalMove{
 	}
 }
 
-class Fake_Out extends PhysicalMove{
+final class Fake_Out extends PhysicalMove{
 	public Fake_Out(){
 		super(Type.NORMAL, 40, 100);
 	}
@@ -66,7 +66,7 @@ class Fake_Out extends PhysicalMove{
 	}
 }
 
-class Screech extends PhysicalMove{
+final class Screech extends PhysicalMove{
 	public Screech(){
 		super(Type.NORMAL, 0, 85);
 	}
@@ -75,7 +75,7 @@ class Screech extends PhysicalMove{
 	}
 }
 
-class Ominous_Wind extends SpecialMove{
+final class Ominous_Wind extends SpecialMove{
 	public Ominous_Wind(){
 		super(Type.GHOST, 60, 100);
 	}
@@ -84,7 +84,7 @@ class Ominous_Wind extends SpecialMove{
 	}
 }
 
-class Rest extends StatusMove{
+final class Rest extends StatusMove{
 	public Rest(){
 		super(Type.PSYCHIC, 0, 0);
 	}
@@ -93,7 +93,7 @@ class Rest extends StatusMove{
 	}
 }
 
-class Rock_Throw extends PhysicalMove{
+final class Rock_Throw extends PhysicalMove{
 	public Rock_Throw(){
 		super(Type.ROCK, 50, 90);
 	}
@@ -102,7 +102,7 @@ class Rock_Throw extends PhysicalMove{
 	}
 }
 
-class Cosmic_Power extends StatusMove{
+final class Cosmic_Power extends StatusMove{
 	public Cosmic_Power(){
 		super(Type.PSYCHIC, 0, 0);
 	}
@@ -111,11 +111,11 @@ class Cosmic_Power extends StatusMove{
 	}
 }
 
-class Wormadam extends Pokemon{
+final class Wormadam extends Pokemon{
 	public Wormadam(String var1, int var2){
 		super(var1, var2);
-		this.setType(Type.BUG);
-		this.addType(Type.GRASS);
+		Type[] t = {Type.BUG, Type.GRASS};
+		this.setType(t);
 		this.setStats(60, 59, 85, 79, 105, 36);
 		this.addMove(new Double_Team());
 		this.addMove(new Thunder());
@@ -124,11 +124,11 @@ class Wormadam extends Pokemon{
 	}
 }
 
-class Tentacruel extends Pokemon{
+final class Tentacruel extends Pokemon{
 	public Tentacruel(String var1, int var2){
 		super(var1, var2);
-		this.setType(Type.WATER);
-		this.setType(Type.POISON);
+		Type[] t = {Type.WATER, Type.POISON};
+		this.setType(t);
 		this.setStats(80, 70, 65, 80, 120, 100);
 		this.addMove(new Overheat());
 		this.addMove(new Fake_Out());
@@ -136,11 +136,11 @@ class Tentacruel extends Pokemon{
 	}
 }
 
-class Oddish extends Pokemon{
+final class Oddish extends Pokemon{
 	public Oddish(String var1, int var2){
 		super(var1, var2);
-		this.setType(Type.GRASS);
-		this.addType(Type.POISON);
+		Type[] t = {Type.GRASS, Type.POISON};
+		this.setType(t);
 		this.setStats(45, 50, 55, 75, 65, 30);
 		this.addMove(new Overheat());
 		this.addMove(new Fake_Out());
@@ -149,7 +149,7 @@ class Oddish extends Pokemon{
 	}
 }
 
-class Dusclops extends Pokemon{
+final class Dusclops extends Pokemon{
 	public Dusclops(String var1, int var2){
 		super(var1, var2);
 		this.setType(Type.GHOST);
@@ -159,11 +159,11 @@ class Dusclops extends Pokemon{
 	}
 }
 
-class Tropius extends Pokemon{
+final class Tropius extends Pokemon{
 	public Tropius(String var1, int var2){
 		super(var1, var2);
-		this.setType(Type.GRASS);
-		this.setType(Type.FLYING);
+		Type[] t = {Type.GRASS, Type.FLYING};
+		this.setType(t);
 		this.setStats(99, 68, 83, 72, 87, 51);
 		this.addMove(new Rest());
 		this.addMove(new Overheat());
@@ -171,11 +171,11 @@ class Tropius extends Pokemon{
 	}
 }
 
-class Chimecho extends Pokemon{
+final class Chimecho extends Pokemon{
 	public Chimecho(String var1, int var2){
 		super(var1, var2);
-		this.setType(Type.PSYCHIC);
-		this.addType(Type.GROUND);
+		Type[] t = {Type.PSYCHIC, Type.GROUND};
+		this.setType(t);
 		this.setStats(75, 50, 80, 95, 90, 65);
 		this.addMove(new Rest());
 		this.addMove(new Overheat());
