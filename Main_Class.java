@@ -8,9 +8,11 @@ import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 import ru.ifmo.se.pokemon.Battle;
 import ru.ifmo.se.pokemon.PhysicalMove;
+import ru.ifmo.se.pokemon.StatusMove;
+import ru.ifmo.se.pokemon.SpecialMove;
 import ru.ifmo.se.pokemon.Messages;
 
-class Double_Team extends PhysicalMove{
+class Double_Team extends StatusMove{
 	public Double_Team(){
 		super(Type.NORMAL, 0, 0);
 	}
@@ -19,7 +21,7 @@ class Double_Team extends PhysicalMove{
 	}
 }
 
-class Thunder extends PhysicalMove{
+class Thunder extends SpecialMove{
 	public Thunder(){
 		super(Type.ELECTRIC, 110, 70);
 	}
@@ -28,7 +30,7 @@ class Thunder extends PhysicalMove{
 	}
 }
 
-class Swagger extends PhysicalMove{
+class Swagger extends StatusMove{
 	public Swagger(){
 		super(Type.NORMAL, 0, 85);
 	}
@@ -73,7 +75,7 @@ class Screech extends PhysicalMove{
 	}
 }
 
-class Ominous_Wind extends PhysicalMove{
+class Ominous_Wind extends SpecialMove{
 	public Ominous_Wind(){
 		super(Type.GHOST, 60, 100);
 	}
@@ -82,7 +84,7 @@ class Ominous_Wind extends PhysicalMove{
 	}
 }
 
-class Rest extends PhysicalMove{
+class Rest extends StatusMove{
 	public Rest(){
 		super(Type.PSYCHIC, 0, 0);
 	}
@@ -100,7 +102,7 @@ class Rock_Throw extends PhysicalMove{
 	}
 }
 
-class Cosmic_Power extends PhysicalMove{
+class Cosmic_Power extends StatusMove{
 	public Cosmic_Power(){
 		super(Type.PSYCHIC, 0, 0);
 	}
